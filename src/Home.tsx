@@ -19,7 +19,7 @@ const DIvMenu = [
 const Home = () => {
 
     function HundelClick() {
-        console.log('Hammasi yaxshi');
+        console.log('Hammasi yi');
 
     }
 
