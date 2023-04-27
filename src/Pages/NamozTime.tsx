@@ -3,8 +3,8 @@ import BoxDiv from '../Compinent/BoxDiv'
 import { useQuery } from '@tanstack/react-query'
 
 import axios from 'axios'
-import { instance } from '../Utils/axios'
-import { keys } from '@mui/system'
+
+
 const NamozTime = () => {
     const TimeGet = useQuery(["NamozTime"], () => { return axios.get('https://islomapi.uz/api/present/day?region=Toshkent').then(resp => resp.data) })
     console.log(TimeGet);
