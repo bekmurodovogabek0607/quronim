@@ -19,7 +19,7 @@ const BoxDiv = ({...rest}:BoxDivType) => {
         </div>
         <div>
             <h2>{rest.name}</h2>
-            <h1>{rest.time}</h1>
+            <h1 style={rest.active?{color:'white'}:{color:"black"}}>{rest.time}</h1>
         </div>
 
     </div>
