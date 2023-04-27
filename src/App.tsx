@@ -7,6 +7,7 @@ import { Link, Route, Switch } from 'react-router-dom';
 import Home from './Home';
 import GlobalProvayder from './GlobalProvayder';
 import SearchQibla from './Pages/SearchQibla';
+import NamozTime from './Pages/NamozTime';
 function App() {
 
 
@@ -18,6 +19,8 @@ function App() {
       <Switch>
         <Route exact={true} path="/" component={Home} />
         <Route exact={true} path="/finder-qibla" component={SearchQibla} />
+        <Route exact={true} path="/time" component={NamozTime} />
+
 
       </Switch>
     </GlobalProvayder>
