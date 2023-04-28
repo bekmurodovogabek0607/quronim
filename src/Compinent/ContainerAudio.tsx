@@ -1,15 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import { Link } from 'react-router-dom';
 import '../index.css'
 import { Router } from 'react-router-dom'
-type DivProps={
-   
+import { Context } from '../GlobalProvayder';
+type DivProps = {
+    
 } & React.ComponentProps<'div'>
-const ConteinerAudio = ({children,...rest}:DivProps) => {
-  return (
-  <div  onClick={()=>{}} className='ContainerDiv ContainerAudio'>{children}<div><i className="fa-solid fa-circle-play"></i></div></div>
-  )
+const ConteinerAudio = ({ children, ...rest }: DivProps) => {
+    const props = useContext(Context)
+    
+    
+    return (
+        <div onClick={() => { }} className='ContainerDiv ContainerAudio'>
+            {children}
+           
+        </div>
+    )
 }
 
 export default ConteinerAudio

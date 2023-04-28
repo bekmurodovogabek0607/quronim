@@ -1,8 +1,13 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState ,useRef} from 'react'
 
 type ContextType={
-    UserINformation:string |null,
-    seUserINformation:React.Dispatch<React.SetStateAction<string | null>>
+    Audio:number|null,
+    setAudio:React.Dispatch<React.SetStateAction<number|null>>,
+    PlayerShow:boolean,
+    setPlayerShow:React.Dispatch<React.SetStateAction<boolean>>,
+    Play:boolean,
+    setPlay:React.Dispatch<React.SetStateAction<boolean>>,
+    audioRef:React.RefObject<HTMLAudioElement> 
 }
 
 
@@ -11,10 +16,15 @@ type ChildrenType = {
     children: React.ReactNode
 }
 const GlobalProvayder = ({ children }: ChildrenType) => {
-    const [UserINformation,seUserINformation]=useState<string |null>("Assalomu aleykum")
+    const [Audio,setAudio]=useState<number |null>(null)
+    const [PlayerShow,setPlayerShow]=useState<boolean>(false)
+    const [Play,setPlay]=useState<boolean>(false)
+    const audioRef=useRef<HTMLAudioElement>(null)
+
+    
     
     return (
-        <Context.Provider value={{UserINformation,seUserINformation}}>{children}</Context.Provider>
+        <Context.Provider value={{Audio,setAudio,PlayerShow,setPlayerShow,Play,setPlay,audioRef}}>{children}</Context.Provider>
     )
 }
 
