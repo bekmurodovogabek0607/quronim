@@ -9,6 +9,8 @@ import GlobalProvayder from './GlobalProvayder';
 import SearchQibla from './Pages/SearchQibla';
 import NamozTime from './Pages/NamozTime';
 import Quronsura from './Pages/Quronsura';
+import Ayats from './Pages/Ayats';
+import Navbar from './Pages/Navbar';
 function App() {
 
 
@@ -17,11 +19,14 @@ function App() {
 
   return (
     <GlobalProvayder>
+      <Navbar/>
       <Switch>
         <Route exact={true} path="/" component={Home} />
         <Route exact={true} path="/finder-qibla" component={SearchQibla} />
         <Route exact={true} path="/time" component={NamozTime} />
         <Route exact={true} path="/sura" component={Quronsura} />
+        <Route exact={true} path="/:id" component={Ayats} />
+
 
 
 

@@ -9,17 +9,17 @@ const NamozTime = () => {
     const TimeGet = useQuery(["NamozTime"], () => { return axios.get('https://islomapi.uz/api/present/day?region=Toshkent').then(resp => resp.data) })
     console.log(TimeGet);
     function CheckTime(params1: string, params2: string): boolean {
-        if(params1==undefined) return false
+        if (params1 == undefined) return false
         let ss: string[] = params1?.split(':')
         let ss2: string[] = params2?.split(':')
-        
-
+        console.log(new Date().getHours());
+        console.log(new Date().getMinutes());
         let NamozTime1: number = Number(ss[0]) * 60 + Number(ss[1])
         let NamozTime2: number = Number(ss2[0]) * 60 + Number(ss2[1])
         let RealTime: number = Number(new Date().getHours()) * 60 + Number(new Date().getMinutes())
         console.log(`${NamozTime1},${RealTime},${NamozTime2}`);
-        
-        if (NamozTime1 < RealTime && RealTime > NamozTime2) return true
+
+        if (RealTime >= NamozTime1 && RealTime <= NamozTime2) return true
         return false
     }
 
