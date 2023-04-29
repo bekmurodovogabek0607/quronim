@@ -42,13 +42,13 @@ const Player = () => {
       props?.setAudio(nums - 1)
     }
   }
-  setInterval(() => {
+  useEffect(() => {
     setCurrentTime(props?.audioRef.current?.currentTime as number)
     if (Repeat) {
       RepeatAll()
     }
 
-  }, 10)
+  }, [CurrentTime])
   let After: number = props?.SuraNumber as number
   let Before: number = props?.SuraNumber as number
   function RepeatAll() {
