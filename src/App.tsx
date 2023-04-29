@@ -29,8 +29,8 @@ function App() {
           <Route exact={true} path="/sura" component={Quronsura} />
           <Route exact={true} path="/:id" component={Ayats} />
         </Switch>
-<Player/>
-      
+        <Player />
+
       </GlobalProvayder>
     </>
 

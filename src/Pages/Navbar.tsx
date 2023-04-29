@@ -12,14 +12,14 @@ const Navbar = () => {
 
 
         </ul>
-        <ul>
+        {/* <ul>
             
             
             <li><ButtonClick Style='secondry'>Sing In</ButtonClick></li>
             <li><ButtonClick Style='prymary'>Sing Up</ButtonClick></li>
 
 
-        </ul>
+        </ul> */}
     </div>
   )
 }
