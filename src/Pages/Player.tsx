@@ -44,9 +44,7 @@ const Player = () => {
   }
   setInterval(() => {
     setCurrentTime(props?.audioRef.current?.currentTime as number)
-    if (Repeat) {
-      RepeatAll()
-    }
+   
 
   }, 10)
   let After: number = props?.SuraNumber as number
