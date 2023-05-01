@@ -12,6 +12,8 @@ import Quronsura from './Pages/Quronsura';
 import Ayats from './Pages/Ayats';
 import Navbar from './Pages/Navbar';
 import Player from './Pages/Player';
+import ErkaklarNamoz from './Pages/ErkaklarNamoz';
+import Bomdot from './Pages/Erkaklar/Bomdot';
 function App() {
 
   const props = useContext(Context)
@@ -27,7 +29,11 @@ function App() {
           <Route exact={true} path="/finder-qibla" component={SearchQibla} />
           <Route exact={true} path="/time" component={NamozTime} />
           <Route exact={true} path="/sura" component={Quronsura} />
-          <Route exact={true} path="/:id" component={Ayats} />
+          <Route exact={true} path="/sura/:id" component={Ayats} />
+          <Route exact={true} path="/erkaklarnamozi" component={ErkaklarNamoz} />
+          <Route exact={true} path="/erkaklarnamozi/bomdot" component={Bomdot} />
+
+          
         </Switch>
         <Player />
 

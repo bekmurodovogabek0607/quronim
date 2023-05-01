@@ -26,7 +26,7 @@ const Quronsura = () => {
             {
                 Data?.map((item: ISura) => {
                     return (
-                        <Conteiner  onClick={()=>{props?.setSuraNumber(item?.number)}}  LINK={`${item?.number}`}>
+                        <Conteiner  onClick={()=>{props?.setSuraNumber(item?.number)}}  LINK={`/sura/${item?.number}`}>
                             <h2>{item?.number} {item?.name}</h2>
                             <h3>{item?.englishName}</h3>
                             <h3>Ayahs number-{item?.numberOfAyahs}</h3>

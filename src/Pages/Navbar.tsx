@@ -7,8 +7,8 @@ const Navbar = () => {
     <div className='Navbar'>
         <ul>
             <li><h1 style={{fontSize:"30px"}}>Quron</h1></li>
-           <Link to={'/'}><li>Home</li></Link> 
-            <li>Sevimli</li>
+           {/* <Link to={'/'}><li>Home</li></Link> 
+            <li>Sevimli</li> */}
 
 
         </ul>

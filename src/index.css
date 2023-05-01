@@ -8,6 +8,11 @@ h1{
   font-size: 50px;
   color: blue;
 }
+.HomePage{
+  display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
 .ContainerDiv{
   width: 250px;
  
@@ -19,7 +24,7 @@ h1{
   align-items: center;
   padding: 20px;
   display: inline-block;
-  margin: 20px;
+  margin: 20px 0px;
   transition: .1s linear;
 }
 .ContainerDiv h2{
@@ -32,7 +37,15 @@ h1{
    
    
 }
-
+.Hover{
+  transition: .1s linear;
+}
+.Hover:hover{
+  transform:scale(1.03);
+   
+   box-shadow: 0px 0px 20px rgb(158, 158, 158);
+   
+}
 .ContainerDiv img{
   transition: .2s linear;
   width:100px;
@@ -93,6 +106,7 @@ font-weight: bold;
   font-size: 18px;
   font-weight: bold;
   box-shadow: 0px 0px 20px rgb(226, 225, 225);
+ 
 }
 .prymary{
   background-color: blue;
@@ -185,17 +199,106 @@ font-weight: bold;
   
 }
 
+.Sarlavha{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  padding: 20px 0px;
+}
+.Sarlavha ul{
+  display: flex;
+  gap: 5px;
+  padding: 0px 0px 20px 0px;
+  flex-wrap: wrap;
+}
+.Sarlavha li{
+  list-style: none;
+  text-decoration: none;
+}
+.NamozHarakatlar{
+   width: 100%;
+   display: grid;
+   gap: 15px;
+   grid-template-columns: 50% 50%;
+   grid-template-rows: auto;
+}
+.NamozHarakatlar li button {
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: blue;
+}
+.NamozHarakatlar>div:nth-child(1){
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.NamozHarakatlar>div:nth-child(1) p{
+  padding: 5px 0px;
+  text-align: start;
+  font-size: 18px;
+  font-weight: 600;
+}
+.NamozHarakatlar>div:nth-child(2){
+  grid-column: 1/2;
+  grid-row: 1/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.NamozHarakatlar>div:nth-child(2) img{
+  width: 300px;
+  object-fit: cover;
+  height: 300px;
+}
+.NamozHarakatlar>div:nth-child(3){
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.NamozHarakatlar img{
+  width: 200px;
+}
 @media screen and (max-width:600px) {
-  .ContainerDiv{
-    width: 95%;
+  /* .ContainerDiv{
+    width: 100%;
+
+  } */
+  .ContainerDiv img{
+    width: 70px;
+    height: 70px;
   }
   h1{
-    font-size: 30px;
+    font-size: 15px;
     
   }
   h2{
     font-size: 25px;
   }
+  .NamozHarakatlar{
+    width: 100%;
+   
+    grid-template-columns: 100%;
+   
+ }
+  .NamozHarakatlar>div:nth-child(1){
+    grid-column: 1/2;
+    grid-row: 1/2;
+   
+  }
+  .NamozHarakatlar>div:nth-child(2){
+    grid-column: 2/3;
+    grid-row: 2/3;
+    
+  }
+  .NamozHarakatlar>div:nth-child(3){
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+  
 }
 @media screen and (max-width:450px) {
   h1{
@@ -205,4 +308,7 @@ font-weight: bold;
   h2{
     font-size: 15px;
   }
+  .Sarlavha h2{
+    font-size: 25px;
+ }
 }
